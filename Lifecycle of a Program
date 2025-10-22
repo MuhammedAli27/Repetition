@@ -1,0 +1,30 @@
+public class Program {
+    public static void main(String[] args) {
+        System.out.println("🎉 Программа родилась!");
+        
+        String имя = "Java";
+        int версия = 17;
+        
+        System.out.println("Я - " + имя + " версия " + версия);
+        System.out.println("Выполняю свою работу...");
+        System.out.println("👋 До свидания!");
+    }
+}
+
+//4 ОСНОВНЫХ ЭТАПА ЖИЗНИ ПРОГРАММЫ:
+1.НАПИСАНИЕ КОДА (Writing Code)
+
+2.КОМПИЛЯЦИЯ (Compilation)
+
+3.ВЫПОЛНЕНИЕ (Execution)
+
+4.ЗАВЕРШЕНИЕ (Termination):
+public class Program {
+    public static void main(String[] args) {
+        System.out.println("Начало программы");
+        
+        System.out.println("Программа выполняется");
+        
+        System.out.println("Конец программы");
+    }
+}
