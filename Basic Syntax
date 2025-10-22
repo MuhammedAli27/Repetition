@@ -1,0 +1,7 @@
+int money = 100;
+
+if (money > 50) {
+    System.out.println("Можно купить пиццу!");
+} else {
+    System.out.println("Сидим на макаронах");
+}
