@@ -1,0 +1,12 @@
+public class MyProgram{
+    public static void main(String[] args) {
+
+        System.out.println("Привет,я программист!");
+
+        int namber = 10;
+        String text = "Меня зовут Мага!";
+
+        System.out.println("text");
+        System.oyt.println("Моё число: " + number);
+    }
+}
