@@ -1,0 +1,15 @@
+public class DataTypes {
+    public static void main(String[] args) {
+        int возраст = 25;
+        double рост = 1.75;
+        char пол = 'М';
+        boolean студент = true;
+        
+        String имя = "Maga";
+        int[] оценки = {5, 4, 3, 5};
+        
+        System.out.println(имя + ", возраст: " + возраст);
+        System.out.println("Рост: " + рост + "м");
+        System.out.println("Студент: " + студент);
+    }
+}
