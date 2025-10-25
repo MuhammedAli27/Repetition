@@ -1,0 +1,24 @@
+// Строка - самый распространенный ссылочный тип
+String name = "Java Developer";
+
+// Массив
+int[] numbers = {1, 2, 3, 4, 5};
+
+// Собственный класс
+Person person = new Person("Maga", 16);
+
+//Примитивные
+int a = 10;
+int b = a;
+b = 20;
+System.out.println(a);
+System.out.println(b);
+
+//Ссылочные
+
+int[] arr1 = {1, 2, 3};
+int[] arr2 = arr1;
+arr2[0] = 100; 
+
+System.out.println(arr1[0]);
+System.out.println(arr2[0]);
