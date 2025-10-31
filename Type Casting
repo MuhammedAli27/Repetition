@@ -1,0 +1,3 @@
+int big = 300;
+byte b = (byte) big;
+System.out.println(b);
