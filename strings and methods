@@ -1,0 +1,19 @@
+public class SimpleStringExample {
+
+    public static void main(String[] args) {
+        String name = "Null";
+        String greeting = createGreeting(name);
+        System.out.println(greeting);
+        System.out.println("Длина: " + greeting.length());
+        printReversed(greeting);
+    }
+
+    public static String createGreeting(String name) {
+        return "Привет, " + name + "!";
+    }
+
+    public static void printReversed(String text) {
+        String reversed = new StringBuilder(text).reverse().toString();
+        System.out.println("Наоборот: " + reversed);
+    }
+}
