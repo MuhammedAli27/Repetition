@@ -1,0 +1,11 @@
+public class MathExample {
+    public static void main(String[] args) {
+        int a = 10, b = 3;
+
+        System.out.println("Сложение: " + (a + b));
+        System.out.println("Деление: " + (a / (double) b));
+        System.out.println("Отсаток: " + (a % b));
+        System.out.println("2 в степени 5: " + Math.pow(2, 5));
+        System.out.println("Случайное число 0-10: " + (int)(Math.random() * 11));
+    }
+}
