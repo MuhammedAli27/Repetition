@@ -1,0 +1,12 @@
+public class StringsAndMethods {
+    public static void main(String[] args) {
+        String name = "Maga";
+        String message = makeMessage(name);
+        System.out.println(message);
+        System.out.println("Длина: " + message.length());
+    }
+
+    public static String makeMessage(String name) {
+        return "Hello! " + name;
+    }
+}
