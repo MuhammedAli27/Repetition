@@ -1,0 +1,31 @@
+public class BankAccount {
+    private double balance;
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        } else {
+            System.out.println("Сумма должна быть положительной!");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Недостаточно средств или некорректная сумма!");
+        }
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount();
+
+        account.deposit(100);
+        account.withdraw(30);
+        System.out.println("Баланс: " + account.getBalance());
+    }
+}
