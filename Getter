@@ -1,0 +1,21 @@
+public class Getter {
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age >= 0 && age <= 150) {
+            this.age = age;
+        } else {
+            System.out.println("Возраст должен быть от 0 до 150!");
+        }
+    }
+
+    public static void main(String[] args) {
+        Getter p = new Getter();
+        p.setAge(16);
+        System.out.println("Возраст: " + p.getAge());
+    }
+}
