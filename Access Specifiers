@@ -1,0 +1,23 @@
+package Cafe;
+
+public class Cafe {
+    public String menu;
+
+    public void orderFood() {
+        System.out.println("Еда готовится!");
+    }
+
+    public void displayMenu() {
+        System.out.println("Сегодня в меню: " + menu);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cafe cafe = new Cafe();
+        cafe.menu = "Борщ, Пюре, CocaCola";
+        cafe.displayMenu();
+        cafe.orderFood();
+        System.out.println("Меню: " + cafe.menu);
+    }
+}
