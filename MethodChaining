@@ -1,0 +1,25 @@
+public class Car {
+    private String color = "white";
+    private boolean engineStarted = false;
+
+    public Car setColor(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public Car startEngine() {
+        this.engineStarted = true;
+        return this;
+    }
+
+    public void showInfo() {
+        System.out.println("Цвет: " + color + ", Двигатель: " + (engineStarted ? "запущен" : "выключен"));
+    }
+
+    public static void main(String[] args) {
+        Car car = new Car()
+                .setColor("red")
+                        .startEngine();
+        car.showInfo();
+    }
+}
