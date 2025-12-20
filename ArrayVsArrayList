@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class ArrayVsArrayList {
+    public static void main(String[] args) {
+        String[] fruits = new String[3];
+        fruits[0] = "Apple";
+        fruits[1] = "Orange";
+        fruits[2] = "Banana";
+
+        for (int i = 0; i < fruits.length; i++) {
+            System.out.println(fruits[i]);
+        }
+        System.out.println("Размер: " + fruits.length);
+
+        ArrayList<String> colors = new ArrayList<>();
+        colors.add("Red");
+        colors.add("Green");
+        colors.add("Blue");
+
+        for (String color : colors) {
+            System.out.println(color);
+        }
+        colors.remove(0);
+        System.out.println("После удаления: ");
+        for (String color : colors) {
+            System.out.println(color);
+        }
+        System.out.println("Размер: " + colors.size());
+
+        int[] numbers = {10, 20, 30};
+        ArrayList<Integer> scores = new ArrayList<>();
+        scores.add(85);
+        scores.add(92);
+        scores.add(100);
+            System.out.println("Массив: " + numbers[0]);
+            System.out.println("Список: " + scores.get(0));
+            System.out.println("Оценок: " + scores.size());
+    }
+}
