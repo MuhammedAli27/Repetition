@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Fruits {
+    public static void main(String[] args) {
+        Set<String> hashSet = new HashSet<>();
+        Set<String> linkedSet = new LinkedHashSet<>();
+        Set<String> treeSet = new TreeSet<>();
+
+        hashSet.add("apple");
+        hashSet.add("banana");
+        hashSet.add("orange");
+
+        linkedSet.add("apple");
+        linkedSet.add("banana");
+        linkedSet.add("orange");
+
+        treeSet.add("apple");
+        treeSet.add("banana");
+        treeSet.add("orange");
+
+        System.out.println("HashSet: " + hashSet);
+        System.out.println("LinkedSet: " + linkedSet);
+        System.out.println("TreeSet: " + treeSet);
+    }
+}
