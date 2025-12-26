@@ -1,0 +1,11 @@
+import java.util.*;
+
+public class FruitPrinter {
+    public static void main(String[] args) {
+        List<String> fruits = java.util.Arrays.asList("яблоко", "банан", "апельсин");
+        Iterator<String> it = fruits.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
+}
