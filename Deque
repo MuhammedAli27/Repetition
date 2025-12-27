@@ -1,0 +1,12 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Name {
+    public static void main(String[] args) {
+        Deque<String> dq = new ArrayDeque<>();
+        dq.addFirst("B");
+        dq.addLast("A");
+        System.out.println(dq.pollFirst());
+        System.out.println(dq.pollLast());
+    }
+}
