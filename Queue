@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class CashierQueue {
+    public static void main(String[] args) {
+        Queue<String> customers = new LinkedList<>();
+        
+        customers.offer("Мухаммед");
+        customers.offer("Али");
+        customers.offer("Света");
+        
+        System.out.println("Обслуживаем: " + customers.poll());
+        System.out.println("Следующий: " + customers.peek());
+    }
+}
