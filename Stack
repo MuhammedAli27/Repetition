@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Food {
+    public static void main(String[] args) {
+        Deque<String> stack = new ArrayDeque<>();
+
+        stack.push("apple");
+        stack.push("orange");
+        stack.push("banana");
+
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+    }
+}
