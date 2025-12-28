@@ -1,0 +1,16 @@
+public class HelloThread extends Thread {
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Привет из потока!");
+        }
+    }
+
+    public static void main(String[] args) {
+        HelloThread t = new HelloThread();
+        t.start();
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Привет из main!");
+        }
+    }
+}
