@@ -1,0 +1,18 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegularExpressions {
+    public static void main(String[] args) {
+        String text = "Мой email: test123@mail.ru, мой телефон: 89001234567";
+
+        String pattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}";
+
+        Pattern p = Pattern.compile(pattern);
+
+        Matcher m = p.matcher(text);
+
+        while (m.find()) {
+            System.out.println("Нашёл email: " + m.group());
+        }
+    }
+}
