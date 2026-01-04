@@ -1,0 +1,14 @@
+import java.time.*;
+
+public class Time {
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now();
+        System.out.println("Сегодня: " + today);
+
+        LocalTime now = LocalTime.now();
+        System.out.println("Сейчас: " + now);
+
+        LocalDateTime now1 = LocalDateTime.now();
+        System.out.println("Сейчас (полностью): " + now1    );
+    }
+}
