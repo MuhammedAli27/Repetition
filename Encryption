@@ -1,0 +1,27 @@
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+public class CryptoExample {
+    public static void main(String[] args) throws Exception {
+        String secretMessage = "Секретное сообщение:Java!";
+
+        KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+        keyGen.init(256);
+        SecretKey secretKey = keyGen.generateKey();
+
+        Cipher cipher = Cipher.getInstance("AES");
+
+        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+        byte[] encryptedBytes = cipher.doFinal(secretMessage.getBytes(StandardCharsets.UTF_8));
+        String encrypted = Base64.getEncoder().encodeToString(encryptedBytes);
+        System.out.println("Зашифровано: " + encrypted);
+
+        cipher.init(Cipher.DECRYPT_MODE, secretKey);
+        byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(encrypted));
+        String decrypted = new String(decryptedBytes, StandardCharsets.UTF_8);
+        System.out.println("Расшифровано: " + decrypted);
+    }
+}
