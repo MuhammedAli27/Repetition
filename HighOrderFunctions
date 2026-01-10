@@ -1,0 +1,14 @@
+import java.util.function.Function;
+
+public class Crush {
+    public static void main(String[] args) {
+
+        Function<Integer, Integer> plusOne = x -> x + 1;
+
+        System.out.println(apply(5, plusOne));
+    }
+
+    static int apply(int value, Function<Integer, Integer> action){
+        return action.apply(value);
+    }
+}
