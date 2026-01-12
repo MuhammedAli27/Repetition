@@ -1,0 +1,77 @@
+package StreamExamples;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class StreamApiDemo {
+
+    public static void main(String[] args) {
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        List<Integer> evenNumbers = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
+
+        System.out.println("Even numbers: " + evenNumbers);
+
+        List<Integer> squared = numbers.stream()
+                .map(n -> n * n)
+                .collect(Collectors.toList());
+
+        System.out.println("Squared: " + squared);
+
+        numbers.stream()
+                .forEach(n -> System.out.print(n + " "));
+        System.out.println();
+
+        int sum = numbers.stream()
+                .reduce(0, Integer::sum);
+
+        System.out.println("Sum: " + sum);
+
+        Optional<Integer> firstEven = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .findFirst();
+
+        firstEven.ifPresent(n ->
+                System.out.println("First even: " + n));
+
+        boolean hasNegative = numbers.stream()
+                .anyMatch(n -> n < 0);
+
+        boolean allPositive = numbers.stream()
+                .allMatch(n -> n > 0);
+
+        System.out.println("Has negative: " + hasNegative);
+        System.out.println("All positive: " + allPositive);
+
+        List<Integer> sortedDesc = numbers.stream()
+                .sorted((a, b) -> b - a)
+                .collect(Collectors.toList());
+
+        System.out.println("Sorted desc: " + sortedDesc);
+
+        List<Integer> withDuplicates =
+                Arrays.asList(1, 2, 2, 3, 3, 4);
+
+        List<Integer> unique = withDuplicates.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println("Unique: " + unique);
+
+        List<Integer> limited = numbers.stream()
+                .limit(3)
+                .collect(Collectors.toList());
+
+        List<Integer> skipped = numbers.stream()
+                .skip(3)
+                .collect(Collectors.toList());
+
+        System.out.println("Limit: " + limited);
+        System.out.println("Skip: " + skipped);
+    }
+}
