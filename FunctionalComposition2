@@ -1,0 +1,15 @@
+import java.util.function.Function;
+
+public class CompositionDemo {
+  public static void main(String[] args) {
+
+    Function<Integer, Integer> add = x -> x + 1;
+    Function<Integer, Integer> sub = x -> x * 2;
+
+    int result = add
+            .andThen(sub)
+            .apply(5);
+
+    System.out.println(result)
+  }
+}
